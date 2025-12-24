@@ -44,7 +44,7 @@ jobs:
           BLOCKLIST_URLS: ${{ vars.BLOCKLIST_URLS }}
 
       - name: Create or update rules and lists
-        run: npm run cf_list_delete.js
+        run: npm run cloudflare-create
         env:
           BLOCK_PAGE_ENABLED: ${{ vars.BLOCK_PAGE_ENABLED }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
